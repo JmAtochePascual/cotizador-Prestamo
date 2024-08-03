@@ -6,10 +6,10 @@ function Resultado({ plazo, totalPagar, pago }) {
   pago = Math.round(pago * 100) / 100;
 
   return (
-    <div className="w-full p-8 rounded-md shadow-md bg-gray-200">
-      <p className="mb-2 text-center font-bold text-xl text-gray-600">{plazo} Meses</p>
-      <p className="mb-2 text-center font-bold text-xl text-gray-600">{formatearCantidad(totalPagar)} Total a pagar</p>
-      <p className="mb-2 text-center font-bold text-xl text-gray-600">{pago} Mensuales</p>
+    <div className="w-full p-8 rounded-md bg-indigo-600">
+      <p className="mb-2 text-center font-bold text-xl text-white">{plazo} Meses</p>
+      <p className="mb-2 text-center font-bold text-xl text-white">{formatearCantidad(totalPagar)} Total a pagar</p>
+      <p className="mb-2 text-center font-bold text-xl text-white">{pago} Mensuales</p>
     </div>
   )
 }
