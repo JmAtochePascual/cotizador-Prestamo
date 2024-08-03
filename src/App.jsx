@@ -1,14 +1,16 @@
 // Importar componentes
 import { useState } from "react"
+import { formatearCantidad } from "./helpers";
 import Header from "./components/Header"
 import Rango from "./components/Rango"
 import Button from "./components/Button";
-import { formatearCantidad } from "./helpers";
+import SelectPlazo from "./components/SelectPlazo";
 
 
 function App() {
   // Estados
   const [cantidad, setCantidad] = useState(10000);
+  const [plazo, setPlazo] = useState(0);
 
   const MIN = 0;
   const MAX = 20000;
@@ -43,10 +45,14 @@ function App() {
     setCantidad(nuevaCantidad);
   }
 
+  // Cambiar plazo
+  const handleChangePlazo = (event) => {
+    setPlazo(Number(event.target.value))
+  }
+
   return (
     <div className="w-11/12 max-w-xl mx-auto p-8 rounded-md shadow-lg bg-white">
       <Header />
-
 
       <div className="mb-2 flex justify-between items-center">
         <Button
@@ -65,8 +71,12 @@ function App() {
         setCantidad={handleChangeCantidad}
       />
 
-      <p className="text-center text-5xl font-extrabold text-indigo-600">{formatearCantidad(cantidad)}</p>
+      <p className="mb-8 text-center text-5xl font-extrabold text-indigo-600">{formatearCantidad(cantidad)}</p>
 
+      <SelectPlazo
+        valor={plazo}
+        fn={handleChangePlazo}
+      />
     </div>
   )
 }
