@@ -71,13 +71,13 @@ function App() {
 
       <div className="mb-2 flex justify-between items-center">
         <Button
-          operador="+"
-          fn={aumentarCantidad}
+          operador="-"
+          fn={disminuirCantidad}
         />
 
         <Button
-          operador="-"
-          fn={disminuirCantidad}
+          operador="+"
+          fn={aumentarCantidad}
         />
       </div>
 
