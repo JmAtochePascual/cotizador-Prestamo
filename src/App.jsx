@@ -1,20 +1,26 @@
 // Importar componentes
-import { useState } from "react"
-import { formatearCantidad } from "./helpers";
+import { useEffect, useState } from "react"
+import { calcularTotal, formatearCantidad } from "./helpers";
 import Header from "./components/Header"
 import Rango from "./components/Rango"
 import Button from "./components/Button";
 import SelectPlazo from "./components/SelectPlazo";
+import Resultado from "./components/Resultado";
 
 
 function App() {
   // Estados
   const [cantidad, setCantidad] = useState(10000);
-  const [plazo, setPlazo] = useState(0);
+  const [plazo, setPlazo] = useState(6);
+  const [totalPagar, setTotalPagar] = useState(0);
 
   const MIN = 0;
   const MAX = 20000;
   const STEP = 100;
+
+  useEffect(() => {
+    setTotalPagar(calcularTotal(cantidad, plazo));
+  }, [cantidad, plazo]);
 
   // Cambiar estado de cantidad
   const handleChangeCantidad = (event) => {
@@ -52,6 +58,7 @@ function App() {
 
   return (
     <div className="w-11/12 max-w-xl mx-auto p-8 rounded-md shadow-lg bg-white">
+
       <Header />
 
       <div className="mb-2 flex justify-between items-center">
@@ -77,6 +84,12 @@ function App() {
         valor={plazo}
         fn={handleChangePlazo}
       />
+
+      <Resultado
+        plazo={plazo}
+        totalPagar={totalPagar}
+      />
+
     </div>
   )
 }
