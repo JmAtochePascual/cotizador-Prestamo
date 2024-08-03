@@ -3,6 +3,7 @@ import { useState } from "react"
 import Header from "./components/Header"
 import Rango from "./components/Rango"
 import Button from "./components/Button";
+import { formatearCantidad } from "./helpers";
 
 
 function App() {
@@ -59,11 +60,12 @@ function App() {
         />
       </div>
 
-
       <Rango
         cantidad={cantidad}
         setCantidad={handleChangeCantidad}
       />
+
+      <p className="text-center text-5xl font-extrabold text-indigo-600">{formatearCantidad(cantidad)}</p>
 
     </div>
   )
