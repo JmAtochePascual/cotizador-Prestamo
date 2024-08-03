@@ -13,14 +13,22 @@ function App() {
   const [cantidad, setCantidad] = useState(10000);
   const [plazo, setPlazo] = useState(6);
   const [totalPagar, setTotalPagar] = useState(0);
+  const [pago, setPago] = useState(0);
 
   const MIN = 0;
   const MAX = 20000;
   const STEP = 100;
 
+  // Calcular total a pagar
   useEffect(() => {
     setTotalPagar(calcularTotal(cantidad, plazo));
   }, [cantidad, plazo]);
+
+  // Calcular pago mensual
+  useEffect(() => {
+    const nuevoPago = totalPagar / plazo;
+    setPago(nuevoPago);
+  }, [totalPagar, plazo]);
 
   // Cambiar estado de cantidad
   const handleChangeCantidad = (event) => {
@@ -88,6 +96,7 @@ function App() {
       <Resultado
         plazo={plazo}
         totalPagar={totalPagar}
+        pago={pago}
       />
 
     </div>
