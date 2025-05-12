@@ -1,17 +1,6 @@
-# ⚡️ Cotizador de Prestamo
+# Cotizador de Prestamo
 
 Este proyecto implementa un simulador de préstamos donde los usuarios pueden ajustar la cantidad y el plazo para calcular el total a pagar y el pago mensual. Utiliza React y Vite para la estructura y funcionalidad de la aplicación.
-
-## Contenido 🎯
-
-1. 📝[Caracteristicas](#caracteristicas)
-2. 🛠️[Tecnologías y Herramientas](#tecnologías-y-herramientas)
-3. 🚀[Estructura del Proyecto](#estructura-del-proyecto)
-4. 🧑‍💻[Uso](#uso)
-5. 🏗️[Contribución](#contribución)
-6. ✨[Licencia](#licencia)
-7. 🙈[Imagen de Referencia](#imagen-de-referencia)
-8. 🌐[Ver Proyecto](#ver-proyecto-en-la-web)
 
 ## Caracteristicas
 
@@ -20,7 +9,14 @@ Este proyecto implementa un simulador de préstamos donde los usuarios pueden aj
 - **Cálculo automático:** El total a pagar y el pago mensual se calculan automáticamente basado en la cantidad y el - plazo seleccionados.
 - **Interfaz responsiva:** Compatible con dispositivos móviles y desktop.
 
-## Tecnologías y Herramientas
+## Tecnologías
+
+![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)
+![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
+![TailwindCSS](https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white)
+![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
+![Vite](https://img.shields.io/badge/vite-%23646CFF.svg?style=for-the-badge&logo=vite&logoColor=white)
 
 - **React:** Librería de JavaScript para construir interfaces de usuario.
 - **Vite:** Herramienta para desarrollo y compilación rápida.
@@ -43,34 +39,62 @@ Este proyecto implementa un simulador de préstamos donde los usuarios pueden aj
 - **index.html:** Página principal.
 - **vite.config.js:** Configuración de Vite.
 
+## Instalación
+
+> Para trabajar con este proyecto, necesitarás tener instalado:
+>
+> - **Node.js** (versión 14 o superior)
+
 ## Uso
 
-Para ejecutar el proyecto localmente, sigue estos pasos:
+Para visualizar el proyecto localmente, sigue estos pasos:
 
-1. Clona el repositorio.
-2. Instala las dependencias con npm install.
-3. Inicia el servidor de desarrollo con `npm run dev`
+1. Clona este repositorio:
+
+```
+git clone https://github.com/JMatochePascual/cotizador-Prestamo.git
+```
+
+2. Navega al directorio del proyecto:
+
+```
+cd cotizador-Prestamo
+```
+
+3. Instala las dependencias necesarias:
+
+```
+npm install
+```
+
+4. Inicia el servidor en modo desarrollo:
+
+```
+npm run dev
+```
 
 ## Contribución
 
-Si estás interesado en contribuir al proyecto, por favor sigue estos pasos:
+Si deseas contribuir al proyecto, por favor sigue estos pasos en orden:
 
-Haz un fork del repositorio.
-Crea una nueva rama para tu característica (git checkout -b mi-nueva-característica).
-Compromete tus cambios (git commit -am 'Añadir alguna característica').
-Empuja la rama (git push origin mi-nueva-característica).
-Abre un pull request.
+1. Haz un fork del repositorio
+
+2. Crea una nueva rama para tu funcionalidad:
+   ```bash
+   git checkout -b feature-name
+   ```
+3. Realiza y confirma tus cambios:
+   ```bash
+   git commit -am 'Add new feature'
+   ```
+4. Sube los cambios a tu repositorio:
+   ```bash
+   git push origin feature-name
+   ```
+5. Abre un Pull Request desde tu repositorio hacia el proyecto principal
 
 ## Licencia
 
-Este proyecto está bajo la licencia MIT.
+Este proyecto se encuentra disponible bajo la licencia MIT. Puedes consultar los términos completos [aquí](https://opensource.org/licenses/MIT).
 
-## Imagen de Referencia
-
-![](https://i.postimg.cc/pdHDyhDV/Cotizador-Prestamo-React.png)
-
-## Ver Proyecto en la WEB
-
-Puedes ver el proyecto en funcionamiento [aquí](https://jmatochepascual.github.io/cotizador-Prestamo/).
-
-Todos los derechos reservados Cotizador Prestamo 2024 ©.
+Desarrollado con 💚 por JMCode | © 2025 - Transformando ideas en soluciones digitales.
