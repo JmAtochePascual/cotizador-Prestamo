@@ -1,8 +1,7 @@
-import React from 'react'
 import { formatearCantidad } from '../helpers'
 
-function Resultado({ plazo, totalPagar, pago }) {
-  // Redondear pago
+export function Resultado({ plazo, totalPagar, pago }) {
+
   pago = Math.round(pago * 100) / 100;
 
   return (
@@ -13,5 +12,3 @@ function Resultado({ plazo, totalPagar, pago }) {
     </div>
   )
 }
-
-export default Resultado
