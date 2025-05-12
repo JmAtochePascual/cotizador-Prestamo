@@ -1,4 +1,3 @@
-// Formatear cantidad a moneda USD
 const formatearCantidad = (cantidad) => {
   return new Intl.NumberFormat('en-US', {
     style: 'currency',
@@ -6,7 +5,6 @@ const formatearCantidad = (cantidad) => {
   }).format(cantidad);
 }
 
-// Calcular total a pagar
 const calcularTotal = (cantidad, plazo) => {
   let total = 0;
 
